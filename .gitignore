@@ -1,14 +1,15 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/upgrade
+#web/app/plugins/*
+#!web/app/plugins/.gitkeep
+#web/app/mu-plugins/*/
+#web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 
 # WordPress
-web/wp
-web/.htaccess
+#web/wp
+#web/.htaccess
+web/wp/wp-content
 
 # Logs
 *.log
@@ -19,7 +20,47 @@ web/.htaccess
 !.env.example
 
 # Composer
-/vendor
+#/vendor
 
 # WP-CLI
 wp-cli.local.yml
+
+# OS generated files #
+######################
+# Thumbnails
+^Icon
+*.swp~
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+Desktop.ini
+
+# macOS
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Front-end #
+#############
+.sass-cache/
+*.sassc
+*.scssc
+*.css.map
+node_modules/
+npm-debug.log
+
+# IDEs #
+########
+.idea
+.vscode
+
+# Other #
+#########
+# S3 Credentials
+.s3config
+
+# Vim generated files
+*.un~
