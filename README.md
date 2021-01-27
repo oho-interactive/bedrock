@@ -9,10 +9,10 @@ Composer are pulled from VCS when running `composer create-project`.
 ## Installation Instructions
 
 1. Create a new WordPress project in the current directory with
-   `composer create-project oho/wp-install 
-   --repository-url=https://packagist.ohodev.com --stability=dev .`.
-2. Make a copy of `.env.example` as `.env`.
-3. Update `.env` with the correct values.
+   `composer create-project oho-wp/install 
+   --repository-url=https://admin@ohosite1100@packagist.ohodev.com 
+   --stability=dev .`.
+2. Update `.env` with the correct values.
   * Replace the `DB_` keys with the correct database information for the current
     environment.
   * Replace `WP_HOME` with the current environment homepage URL, with leading
@@ -21,8 +21,8 @@ Composer are pulled from VCS when running `composer create-project`.
     all instances of `generateme` with the generated salt.
   * Retrieve the Advanced Custom Fields Pro license key from 1Password (search
     for "ACF License") and add it to the `ACF_PRO_KEY` key.
-4. Run `composer update` to install Advanced Custom Fields Pro.
-5. Visit the site at `/wp` to run the WordPress installer.
+3. Run `composer update` to install Advanced Custom Fields Pro.
+4. Visit the site at `/wp` to run the WordPress installer.
 
 ## Multisite
 
@@ -38,5 +38,6 @@ through Composer with the command: `composer wp ...`.
 ## Troubleshooting
 
 * If Composer fails with the error "curl: (60) SSL certificate problem: unable 
-  to get local issuer certificate", you can run the `composer create-projct` 
-  command above with the `--no-secure-http` flag added.
+  to get local issuer certificate", you can change the packagist.ohodev.com 
+  url to "http" and run the `composer create-projct` command above with the 
+  `--no-secure-http` flag added.

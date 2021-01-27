@@ -29,10 +29,14 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
+    "oho-wp/oho-acf-hidden": "dev-master",
+    "oho-wp/oho-acf-local-json": "dev-master",
     "oho-wp/orange": "dev-master",
     "oho-wp/orange-child": "dev-master",
     "timber/timber": "^1.18",
     "topfloor/composer-cleanup-vcs-dirs": "dev-composer-2",
+    "wpackagist-plugin/autodescription": "^4.1",
+    "wpackagist-plugin/redirection": "^5.0",
     "wpackagist-plugin/user-role-editor": "^4.57",
     "wpackagist-theme/twentytwentyone": "^1.1"
   },
@@ -55,6 +59,8 @@
       "web/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "advanced-custom-fields/advanced-custom-fields-pro",
+        "oho-wp/oho-acf-hidden",
+        "oho-wp/oho-acf-local-json",
         "roots/multisite-url-fixer",
         "wpackagist-plugin/user-role-editor"
       ],
@@ -65,7 +71,12 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "php -r \"copy('.env.example', '.env');\""
+      "php -r \"copy('.env.example', '.env');\"",
+      "@remove-default"
+    ],
+    "remove-default": [
+      "rm -rf web/wp/wp-content/themes/*",
+      "rm -rf web/wp/wp-content/plugins/hello.php"
     ],
     "test": [
       "phpcs"
