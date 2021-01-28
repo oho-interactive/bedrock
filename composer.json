@@ -31,6 +31,7 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
     "oho-wp/oho-acf-hidden": "dev-master",
     "oho-wp/oho-acf-local-json": "dev-master",
+    "oho-wp/oho-environment-indicator": "^2.0",
     "oho-wp/orange": "dev-master",
     "oho-wp/orange-child": "dev-master",
     "timber/timber": "^1.18",

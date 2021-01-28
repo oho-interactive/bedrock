@@ -116,6 +116,21 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
+/**
+ * ACF Local JSON.
+ */
+Config::define('OHO_ACF_JSON_PATH', 'acf-config');
+
+/**
+ * Environment indicator.
+ */
+if (env('OHO_ENVIRONMENT_INDICATOR_ENVIRONMENT_NAME')) {
+    Config::define('OHO_ENVIRONMENT_INDICATOR_ENVIRONMENT_NAME', env('OHO_ENVIRONMENT_INDICATOR_ENVIRONMENT_NAME'));
+}
+if (env('OHO_ENVIRONMENT_INDICATOR_ENVIRONMENT_COLOR')) {
+    Config::define('OHO_ENVIRONMENT_INDICATOR_ENVIRONMENT_COLOR', env('OHO_ENVIRONMENT_INDICATOR_ENVIRONMENT_COLOR'));
+}
+
 if (file_exists($env_config)) {
     require_once $env_config;
 }
