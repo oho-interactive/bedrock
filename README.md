@@ -24,6 +24,18 @@ Composer are pulled from VCS when running `composer create-project`.
 3. Run `composer update` to install Advanced Custom Fields Pro.
 4. Visit the site at `/wp` to run the WordPress installer.
 
+## Existing Project Local Environment Setup Instructions
+
+1. Make a copy of `.env.example` as `.env`.
+2. Update `.env` with the correct values.
+  * Replace the `DB_` keys with the correct database information for the current
+    environment.
+  * Replace `WP_HOME` with the current environment homepage URL, with leading
+    protocol and without trailing slash.
+3. (Optional) If you need to manage packages through Composer, Retrieve the
+   Advanced Custom Fields Pro license key from 1Password (search for "ACF License")
+   and add it to the `ACF_PRO_KEY` key.
+
 ## Multisite
 
 If this is a multisite install, the package

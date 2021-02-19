@@ -31,15 +31,18 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
     "oho-wp/oho-acf-hidden": "dev-master",
     "oho-wp/oho-acf-local-json": "dev-master",
-    "oho-wp/oho-environment-indicator": "^2.0",
+    "oho-wp/oho-alert": "2.x-dev",
+    "oho-wp/oho-disable-comments": "2.x-dev",
+    "oho-wp/oho-disable-posts": "dev-master",
+    "oho-wp/oho-environment-indicator": "2.x-dev",
     "oho-wp/orange": "dev-master",
-    "oho-wp/orange-child": "dev-master",
     "timber/timber": "^1.18",
     "topfloor/composer-cleanup-vcs-dirs": "dev-composer-2",
+    "wpackagist-plugin/advanced-custom-fields-font-awesome": "^3.1",
     "wpackagist-plugin/autodescription": "^4.1",
+    "wpackagist-plugin/breadcrumb-trail": "^1.1",
     "wpackagist-plugin/redirection": "^5.0",
-    "wpackagist-plugin/user-role-editor": "^4.57",
-    "wpackagist-theme/twentytwentyone": "^1.1"
+    "wpackagist-plugin/user-role-editor": "^4.57"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
@@ -62,8 +65,16 @@
         "advanced-custom-fields/advanced-custom-fields-pro",
         "oho-wp/oho-acf-hidden",
         "oho-wp/oho-acf-local-json",
+        "oho-wp/oho-alert",
+        "oho-wp/oho-disable-comments",
+        "oho-wp/oho-disable-posts",
+        "oho-wp/oho-environment-indicator",
         "roots/multisite-url-fixer",
-        "wpackagist-plugin/user-role-editor"
+        "wpackagist-plugin/advanced-custom-fields-font-awesome",
+        "wpackagist-plugin/autodescription",
+        "wpackagist-plugin/breadcrumb-trail",
+        "wpackagist-plugin/user-role-editor",
+        "wpackagist-plugin/redirection"
       ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
